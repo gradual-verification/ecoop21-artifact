@@ -1,0 +1,27 @@
+language: c
+sudo: required
+env:
+  - OCAML_VERSION=4.07.1
+cache:
+  directories:
+    - ${HOME}/.opam
+    - facebook-clang-plugins
+addons:
+  apt:
+    packages:
+      - libmpfr-dev
+before_install:
+  - wget -O ${HOME}/opam https://github.com/ocaml/opam/releases/download/2.0.3/opam-2.0.3-x86_64-linux
+  - chmod +x ${HOME}/opam
+  - export PATH=${HOME}:${PATH}
+  - export OPAMYES=1
+  - export OPAMJOBS=2
+  - opam init --compiler=${OCAML_VERSION} --disable-sandboxing
+  - eval $(opam env)
+  - export OPAMVERBOSE=1
+install:
+  - ./build-infer.sh java
+script:
+  - ./test
+os:
+- linux

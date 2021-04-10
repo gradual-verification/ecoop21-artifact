@@ -1,0 +1,2 @@
+#!/bin/sh
+dot -Tpdf infer/tests/codetoanalyze/java/gradual/infer-out/captured/Gradual.java*/icfg.dot -o icfg.pdf

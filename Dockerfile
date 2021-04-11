@@ -1,4 +1,5 @@
 FROM ubuntu:20.04
+LABEL org.opencontainers.image.source https://github.com/gradual-verification/ecoop21-artifact
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install --yes \
     autoconf automake bzip2 cmake curl gcc git libc6-dev libmpfr-dev \

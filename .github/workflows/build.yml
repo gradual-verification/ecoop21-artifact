@@ -9,6 +9,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Login
+        run: echo "$CR_PAT" | docker login -u "$GITHUB_ACTOR" --password-stdin
+        env:
+          CR_PAT: ${{ secrets.CR_PAT }}
       - name: Pull
         run: docker pull ghcr.io/gradual-verification/ecoop21:latest
       - name: Build
@@ -16,9 +20,5 @@ jobs:
           docker build . --pull \
             --cache-from ghcr.io/gradual-verification/ecoop21:latest \
             --tag ghcr.io/gradual-verification/ecoop21:latest
-      - name: Login
-        run: echo "$CR_PAT" | docker login -u "$GITHUB_ACTOR" --password-stdin
-        env:
-          CR_PAT: ${{ secrets.CR_PAT }}
       - name: Push
         run: docker push ghcr.io/gradual-verification/ecoop21:latest

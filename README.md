@@ -69,7 +69,7 @@ We will be using the `--gradual-only` flag, which corresponds to the main
 prototype described in our paper (specifically the one we use in section 6.3,
 "Static Warnings", under section 6, "Empirical Evaluation").
 
-Another file in the current directoy is `Hello.java`, which contains your
+Another file in the current directory is `Hello.java`, which contains your
 garden-variety "Hello, world!" Java program. You can analyze it using our
 prototype like this:
 

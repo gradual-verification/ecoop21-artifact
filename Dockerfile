@@ -20,3 +20,4 @@ RUN make install
 
 WORKDIR /home/ecoop
 COPY README.md .
+COPY Hello.java .

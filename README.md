@@ -4,7 +4,7 @@ Once you have [Docker][] installed, open a terminal and run this command to
 download and run the Docker image for this artifact:
 
 ```
-$ docker run -it ghcr.io/gradual-verification/ecoop21:latest
+$ docker run --pull=always -it ghcr.io/gradual-verification/ecoop21:latest
 ```
 
 Once the image finishes downloading and extracting, you should see a shell

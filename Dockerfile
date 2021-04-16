@@ -18,6 +18,5 @@ WORKDIR /infer-gv-impl
 RUN ./build-infer.sh java
 RUN make install
 
-WORKDIR /
-RUN git clone https://github.com/gradual-verification/NullSafetyJava.git
-RUN git clone https://github.com/gradual-verification/infer-gv-data.git
+WORKDIR /home/ecoop
+COPY README.md .

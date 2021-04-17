@@ -397,7 +397,7 @@ BUILD FAILED in 2s
 Now we use our prototype.
 
 > In contrast, GNPA optimistically assumes both calls to `reverse` in `main`
-> (lines 11–12) are valid without assigning fixed annotations to `reverse`'s
+> (lines 11-12) are valid without assigning fixed annotations to `reverse`'s
 > argument or return value. Then, the analysis can continue relying on
 > _contextual optimism_ when reasoning about the rest of `main`: `reversed` is
 > assumed `@NonNull` to satisfy its dereference on line 13. Of course this is

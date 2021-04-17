@@ -1,0 +1,20 @@
+plugins {
+  id 'java'
+  id 'org.checkerframework' version '0.5.14'
+}
+
+repositories {
+  jcenter()
+}
+
+dependencies {
+  implementation 'com.github.spotbugs:spotbugs-annotations:3.1.12'
+}
+
+apply plugin: 'org.checkerframework'
+
+checkerFramework {
+  checkers = [
+    'org.checkerframework.checker.nullness.NullnessChecker'
+  ]
+}

@@ -1,0 +1,25 @@
+plugins {
+  id 'java'
+  id "net.ltgt.errorprone" version "0.6"
+}
+
+repositories {
+  jcenter()
+}
+
+dependencies {
+  implementation 'com.github.spotbugs:spotbugs-annotations:3.1.12'
+
+  annotationProcessor "com.uber.nullaway:nullaway:0.8.0"
+
+  errorprone "com.google.errorprone:error_prone_core:2.4.0"
+  errorproneJavac "com.google.errorprone:javac:9+181-r4173-1"
+}
+
+import net.ltgt.gradle.errorprone.CheckSeverity
+
+tasks.withType(JavaCompile) {
+  options.errorprone {
+    check("NullAway", CheckSeverity.ERROR)
+  }
+}

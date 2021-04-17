@@ -21,5 +21,6 @@ import net.ltgt.gradle.errorprone.CheckSeverity
 tasks.withType(JavaCompile) {
   options.errorprone {
     check("NullAway", CheckSeverity.ERROR)
+    option("NullAway:AnnotatedPackages", "com.uber")
   }
 }

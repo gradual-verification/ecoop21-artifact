@@ -1,5 +1,4 @@
 import edu.umd.cs.findbugs.annotations.Nullable;
-
 class Main {
   static @Nullable String reverse(String str) {
     if (str == null) return null;

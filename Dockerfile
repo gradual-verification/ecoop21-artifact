@@ -2,7 +2,7 @@ FROM ubuntu:20.04
 LABEL org.opencontainers.image.source https://github.com/gradual-verification/ecoop21-artifact
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install --yes \
-    autoconf automake bzip2 cmake curl gcc git libc6-dev libmpfr-dev \
+    autoconf automake bat bzip2 cmake curl gcc git libc6-dev libmpfr-dev \
     libsqlite3-dev make openjdk-8-jdk-headless patch pkg-config python2.7 \
     tree unzip vim zlib1g-dev
 

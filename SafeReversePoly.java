@@ -1,5 +1,4 @@
 import org.checkerframework.checker.nullness.qual.PolyNull;
-
 class Main {
   static @PolyNull String reverse(@PolyNull String str) {
     if (str == null) return new String();

@@ -1,5 +1,4 @@
 import edu.umd.cs.findbugs.annotations.NonNull;
-
 class Main {
   static @NonNull String reverse(String str) {
     if (str == null) return new String();

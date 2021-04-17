@@ -1,5 +1,4 @@
 
-
 class Main {
   static String reverse(String str) {
     if (str == null) return null;

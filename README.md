@@ -580,12 +580,12 @@ soundness on this example by warning about the `return null;` statement on line
 > However, GNPA safeguards its optimistic static assumptions with run-time
 > checks. Therefore, the analysis will correctly report an error on line 13.
 
-The wording here is a bit misleading: while it is true that "the analysis will
-report an error on line 13", that is referring to the dynamic run-time behavior
-of a hypothetical implementation of our analysis that actually inserts run-time
-checks. While our prototype does give a warning on line 13 as you can see below,
-this is in the `GRADUAL_CHECK` category, and thus is not ultimately meant to be
-displayed to the programmer.
+Note that when the paper says "the analysis will report an error on line 13"
+here, it is referring to the _dynamic_ run-time behavior of a hypothetical
+implementation of our analysis that actually inserts run-time checks. While our
+prototype does give a warning on line 13 as you can see below, this is in the
+`GRADUAL_CHECK` category, and thus is not ultimately meant to be displayed to
+the programmer.
 
 ```
 ~/examples/2.3/checker/unannotated# cd ~/examples/2.3/infer/unannotated

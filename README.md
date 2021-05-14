@@ -1,7 +1,7 @@
 # [ECOOP 2021][] artifact: Gradual Program Analysis for Null Pointers
 
-The accepted version of the paper can be found here:
-https://gradual-verification.github.io/ecoop21-artifact/ecoop21-paper19.pdf
+The full version of the paper can be found here:
+https://arxiv.org/abs/2105.06081
 
 Once you have [Docker][] installed, open a terminal and run this command to
 download and run the Docker image for this artifact:
